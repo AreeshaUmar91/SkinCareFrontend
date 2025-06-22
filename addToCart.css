@@ -1,7 +1,35 @@
+.order-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#order-message {
+  color: #84C444;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #84C444;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button a{
+  text-decoration: none;
+  color: #ffffff;
+}
+button:hover {
+  background-color: #84C444;
+}
+
 .container h1{
   align-items: center;
   padding: 10px;
-  border: 1px solid rgb(27, 100, 51);
+  border: 1px solid #84C444;
   border-radius: 20px;
     margin-top: 50px;
     background-color:  #84C444 ;
@@ -13,7 +41,7 @@ header li a img{
 }
 #cart-items-container h2{
   padding: 3px;
-  border: 1px solid rgb(27, 100, 51);
+  border: 1px solid #84C444;
   border-radius: 20px;
     margin-top: 50px;
     background-color:  #84C444 ;
@@ -21,7 +49,7 @@ header li a img{
     width: fit-content;
 }
 #items-list{
-  border: 1px solid rgb(27, 100, 51);
+  border: 1px solid #84C444;
   border-radius: 20px;
     margin-top: 5px;
     margin-left: 1px;
