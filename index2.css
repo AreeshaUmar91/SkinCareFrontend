@@ -1,0 +1,435 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #228B22;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+.nav-links ul li a:hover {
+  background-color: white;
+  color: #228B22;
+  border-radius: 5px;
+}
+
+.cart-icon a {
+  color: white;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+/* Hamburger menu hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Responsive: phones and tablets */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    background-color: #228B22;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .cart-icon {
+    font-size: 20px;
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+/* Center the h1 element and apply the color combination */
+h1 {
+  font-size: 36px;
+  color: #84C444; /* Greenish color for the text */
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+color: #fff; /* Black background */
+  background-color: #84C444; /* Green text on black background */
+  border-radius: 20px; /* Rounded corners */
+  width: 80%; /* Give it some width */
+  max-width: 800px; /* Limit maximum width for larger screens */
+  margin-top: 5vh; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Adjust font size on smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+    width: 90%; /* Make the width larger on smaller screens */
+    margin-top: 20vh; /* Slightly adjust vertical margin */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Further reduce font size on mobile */
+    padding: 10px; /* Less padding for mobile */
+    width: 95%; /* Allow more width for mobile */
+    margin-top: 15vh; /* Adjust vertical positioning for mobile */
+  }
+}
+
+
+/* Style for the header (Navigation Bar) */
+header {
+  position: sticky;
+  top: 0; /* Keeps the header at the top of the screen */
+  background-color: #84C444; /* Ensure the background is visible */
+  z-index: 1000; /* Make sure the header stays above other content */
+  width: 100%;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Optional: Adds shadow to the header */
+  padding: 10px 10px; /* Adds some padding to the header */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the navigation items */
+}
+
+nav li {
+  margin: 0 20px; /* Add spacing between navigation items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /* Text color for links */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: block;
+  transition: color 0.3s ease;
+}
+nav img{
+  border: none;
+  border-radius: 50%;
+}
+nav a:hover {
+  color: #333; /* Change color on hover */
+}
+header li{
+  list-style-type: none;
+}
+header li a{
+  text-decoration: none;
+  color: #fff; /* Text color for links */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: block;
+  transition: color 0.3s ease;
+}
+header li a:hover {
+  color: #333; /* Change color on hover */
+}
+header li img{
+  border: none;
+  border-radius: 30%;
+}
+header li img:hover{
+  color: #333; 
+  
+}
+/* Login Form Styles */
+.login-form {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input[type="email"],
+.login-form input[type="tel"],
+.login-form input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-form input[type="submit"] {
+  width: 90%;
+  padding: 10px;
+  background-color: #84C444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #f4a261;
+}
+
+#verificationSection {
+  margin-top: 20px;
+}
+
+#verificationSection input[type="text"] {
+  margin-bottom: 10px;
+}
+
+#verificationSection button {
+  padding: 10px 20px;
+  background-color: #84C444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#verificationSection button:hover {
+  background-color: #f1eded;
+} */
+
+/* Footer Styles */
+.footer {
+  background-color: #84C444; /* green */
+  color: white;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.newsletter-input {
+  padding: 8px;
+  width: 80%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.subscribe-button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background-color: white;
+  color: #84C444;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 10px;
+}
+
+/* 📱 Responsive footer on phones */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px; /* Adjust header font size */
+  }
+
+  .page h1 {
+    font-size: 28px; /* Adjust page heading size */
+  }
+
+  .para {
+    font-size: 14px; /* Adjust paragraph font size */
+    padding: 8px;
+  }
+
+  section {
+    padding: 30px 15px; /* Adjust padding for sections */
+  }
+
+  h2 {
+    font-size: 24px; /* Adjust subheading font size */
+  }
+
+  p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+}
+
+/* When screen width is smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px; /* Smaller header font size for mobile */
+  }
+
+  .page h1 {
+    font-size: 24px; /* Adjust page heading size */
+  }
+
+  .para {
+    font-size: 12px; /* Adjust paragraph font size */
+    padding: 6px;
+  }
+
+  section {
+    padding: 20px 10px; /* Adjust padding for mobile */
+  }
+
+  h2 {
+    font-size: 20px; /* Adjust subheading font size */
+  }
+
+  p {
+    font-size: 12px; /* Adjust paragraph font size */
+  }
+}
