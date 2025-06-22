@@ -1,4 +1,51 @@
 /* General Styles */
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+
+    /* Responsive styles for phones */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px; /* Smaller text on phones */
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      header, footer {
+        padding: 10px;
+      }
+    }
 * {
   margin: 0;
   padding: 0;
